@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+    color: pink;
+    padding: 50px 0px;
+}
+#main-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+table{
+    border-collapse: collapse;
+}
+table tr th {
+    background-color: rgb(214, 199, 136);
+    font-size: 25px;
+    color: lightcoral;
+    padding: 10px;
+}
+table tr td {
+    background-color: bisque;
+    text-align: center;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.align{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.button-margin{
+    margin: 30px 0px;
+}
+.button-style{
+    padding: 20px 30px;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: beige;
+    background-color: burlywood;
+    border: none;
+    border-radius: 15px;
+}
+.button-style:hover{
+    background-color: rgb(188, 141, 79);
+}
+.button-style:active{
+    background-color: brown;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myntra Bag</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Myntra Bag</h1>
+    <div id="main-container">
+        <div id="cart-container" class="align">
+            <div id="cart-table-container">
+                <table border="1">
+                    <tr>
+                        <th>Cart Items</th>
+                    </tr>
+                    <tr>
+                        <td id="item-cart">0</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="cart-button-container" class="button-margin">
+                <button class="button-style" onclick="
+                    items++;
+                    if (items >= 0) {
+                        document.querySelector('#item-cart').innerText = `${items}`;
+                    }
+                    ">Add to Cart</button>
+            </div>
+        </div>
+        <div id="whishlist-container" class="align">
+            <div id="wishlist-table-container">
+                <table border="1">
+                    <tr>
+                        <th>Wishlist Items</th>
+                    </tr>
+                    <tr>
+                        <td id="item-wishlist">0</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="wishlist-button-container" class="button-margin">
+                <button class="button-style" onclick="
+                    wishlistItem++;
+                    if (items>0) {
+                        document.querySelector('#item-wishlist').innerText = `${wishlistItem}`
+                    }
+                    items--;
+                    if (items < 0) {
+                        document.querySelector('#item-cart').innerText = 0;
+                    }
+                    else{
+                        document.querySelector('#item-cart').innerText = `${items}`
+                    }
+                    ">move to wishlist</button>
+            </div>
+        </div>
+        <div id="order-container" class="align">
+            <div id="order-table-container">
+                <table border="1">
+                    <tr>
+                        <th>Your Orders</th>
+                    </tr>
+                    <tr>
+                        <td id="item-order">0</td>
+                    </tr>
+                </table> 
+            </div>
+            <div id="order-button-container" class="button-margin">
+                <button class="button-style" onclick="
+                    orderItem++;
+                    if (items >0) {
+                        document.querySelector('#item-order').innerText = `${orderItem}`;
+                    }
+                    items--;
+                    if (items<0) {
+                        document.querySelector('#item-cart').innerText = 0;
+                    }
+                    else{
+                        document.querySelector('#item-cart').innerText = `${items}`;
+                    }
+                    ">Order Placed</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        let items = 0;
+        let wishlistItem = 0;
+        let orderItem = 0;
+    </script>
+</body>
+</html>
